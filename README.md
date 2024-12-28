@@ -36,10 +36,10 @@ An e-commerce application built with Spring Boot that exposes RESTful API servic
 2. Click the links to access individual project repositories.
 3. Each sub-repository contains its own README file with setup instructions and details about the project.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! If you'd like to suggest improvements or add a new educational project, feel free to open an issue or submit a pull request.
 
-## License
+## 📄 License
 
 This repository is licensed under the MIT License. See individual sub-repositories for more details on licensing.
