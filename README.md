@@ -23,7 +23,7 @@ SpringBoot is a powerful framework for building Java-based applications with min
 
 ## 🚀 Projects
 
-### 1. [Shopping](https://github.com/gussttaav/learning-tools/tree/gradient-descend-2D)
+### 1. [Shopping](https://github.com/gussttaav/springboot-projects/tree/gestion-tienda)
 An e-commerce application built with Spring Boot that exposes RESTful API services, with no front-end provided. It uses **Spring Security** for role-based access control and a **MySQL** database to manage users, products, and purchases, where admins can manage products and view all purchases, while regular users can only view products and make purchases.
 
 > *More projects will be added over time!*
