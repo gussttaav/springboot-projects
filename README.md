@@ -4,11 +4,11 @@ Welcome to the **SpringBoot Projects** repository! This collection showcases var
 
 ## 📋 Table of Contents
 
-1. [About](#about)
-2. [Projects](#projects)
-3. [How to Use This Repository](#how-to-use-this-repository)
-4. [Contributing](#contributing)
-5. [License](#license)
+1. [About](#-about)
+2. [Projects](#-projects)
+3. [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
+4. [Contributing](#-contributing)
+5. [License](#-license)
 
 ---
 
