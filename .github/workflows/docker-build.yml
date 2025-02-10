@@ -39,17 +39,36 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
+      - name: Build and push database image
+        run: |
+          # Build custom MySQL image with schema
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-db:latest -f- . <<EOF
+          FROM mysql:9
+          COPY mysql-init/shopping_db.sql /docker-entrypoint-initdb.d/
+          EOF
+          
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-db:latest
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-db:latest ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-db:${{ github.sha }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-db:${{ github.sha }}
+
       - name: Build and push application image
         run: |
-          # Build the application image only (without starting the services)
           docker compose build app
           
-          # Get the image ID of the built image
           IMAGE_ID=$(docker images g-commerce-backend --quiet)
           
-          # Tag and push using the image ID
           docker tag $IMAGE_ID ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-backend:latest
           docker tag $IMAGE_ID ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-backend:${{ github.sha }}
           
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-backend:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-backend:${{ github.sha }}
+
+      - name: Update Docker Hub Description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/g-commerce-backend
+          readme-filepath: ./DOCKER.md
+          short-description: "Spring Boot E-commerce API with MySQL database"
+          categories: "application,development"
