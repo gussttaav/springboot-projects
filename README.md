@@ -5,12 +5,11 @@ Welcome to the **SpringBoot Projects** repository! This collection showcases var
 ## 📋 Table of Contents
 
 1. [About](#-about)
-2. [Projects](#-projects)
-3. [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
+2. [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
+3. [Projects](#-projects)
 4. [Contributing](#-contributing)
 5. [License](#-license)
 
----
 
 ## 📖 About
 
@@ -21,20 +20,27 @@ SpringBoot is a powerful framework for building Java-based applications with min
 - Real-world use cases and example applications.
 
 
+## 🛠️ How to Use This Repository
+
+1. Browse the projects listed below.
+2. Click the links to access individual project repositories.
+3. Each repository contains its own README file with setup instructions and details about the project.
+
+
 ## 🚀 Projects
 
-### 1. [Shopping](https://github.com/gussttaav/springboot-projects/tree/gestion-tienda)
-An e-commerce application built with Spring Boot that exposes RESTful API services, with no front-end provided. It uses **Spring Security** for role-based access control and a **MySQL** database to manage users, products, and purchases, where admins can manage products and view all purchases, while regular users can only view products and make purchases.
+### 1. [G-commerce API](https://github.com/gussttaav/g-commerce-springboot-api)
+A secure, scalable RESTful API for an e-commerce system with authentication, role-based access control, and product management. It supports user registration, profile management, and paginated user listings. Products can be created, updated, and searched with role-based access and status filtering. Shopping cart functionality and purchase tracking ensure a smooth buying experience with role-specific restrictions.
+
+Security features include rate limiting, HTTPS enforcement, and Spring Security-based authentication. The API is fully documented with Swagger/OpenAPI and Javadoc. Automated CI/CD via GitHub Actions streamlines Docker-based deployments, while comprehensive testing ensures reliability in containerized environments.
+
+**Technologies**: Java 17, Spring Boot 3.4.3, Spring Security, MySQL 9, Mockito, JUnit 5, Bucket4j, Swagger/OpenAPI, Docker, Maven, GitHub Actions
+
+**Frontend Implementations**:
+- [HTML/JavaScript/Bootstrap Implementation](https://github.com/gussttaav/g-commerce-front-web-no-framework) – A lightweight, framework-free web interface. [▶️ Live Demo](https://g-commerce-front-web-no-framework.vercel.app/)
 
 > *More projects will be added over time!*
 
----
-
-## 🛠️ How to Use This Repository
-
-1. Browse the projects listed above.
-2. Click the links to access individual project repositories.
-3. Each sub-repository contains its own README file with setup instructions and details about the project.
 
 ## 🤝 Contributing
 
