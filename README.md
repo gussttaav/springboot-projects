@@ -7,8 +7,9 @@ Welcome to the **SpringBoot Projects** repository! This collection showcases var
 1. [About](#-about)
 2. [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
 3. [Projects](#-projects)
-4. [Contributing](#-contributing)
-5. [License](#-license)
+   - [G-commerce API](#1-g-commerce-api)
+5. [Contributing](#-contributing)
+6. [License](#-license)
 
 
 ## 📖 About
